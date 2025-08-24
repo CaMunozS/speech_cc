@@ -1,8 +1,1 @@
-# TODO el contenido de la carpeta model va a Git LFS
 model/** filter=lfs diff=lfs merge=lfs -text
-
-# PERO estos archivos se quedan en Git normal
-model/.gitkeep -filter -diff -merge
-model/*.json -filter -diff -merge
-model/*.txt -filter -diff -merge
-model/*.md -filter -diff -merge
