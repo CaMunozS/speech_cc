@@ -8,8 +8,7 @@ Prueba de concepto para clasificación y descubrimiento de tópicos en conversac
 
   ```bash
   git lfs install
-  git clone https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 \
-      model/paraphrase-multilingual-MiniLM-L12-v2
+  git clone https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 model/paraphrase-multilingual-MiniLM-L12-v2
   ```
 
   Para trabajar sin conexión, establecer `TRANSFORMERS_OFFLINE=1` antes de ejecutar los scripts.
