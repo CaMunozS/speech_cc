@@ -1,0 +1,11 @@
+# Pesos de modelos (HuggingFace / Transformers)
+model/*.bin filter=lfs diff=lfs merge=lfs -text
+model/*.pt filter=lfs diff=lfs merge=lfs -text
+model/*.ckpt filter=lfs diff=lfs merge=lfs -text
+model/*.onnx filter=lfs diff=lfs merge=lfs -text
+model/*.safetensors filter=lfs diff=lfs merge=lfs -text
+
+# Archivos chicos quedan normales
+model/.gitkeep -filter -diff -merge
+model/*.json -filter -diff -merge
+model/*.txt -filter -diff -merge
