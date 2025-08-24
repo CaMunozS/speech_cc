@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from typing import List
+from pathlib import Path
 
 from sentence_transformers import SentenceTransformer
 
-_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
+# Path to the locally stored model inside the project.
+_MODEL_PATH = Path(__file__).resolve().parent / "model" / "paraphrase-multilingual-MiniLM-L12-v2"
 _model: SentenceTransformer | None = None
 
 
@@ -12,7 +14,7 @@ def _get_model() -> SentenceTransformer:
     """Lazily load and cache the SentenceTransformer model."""
     global _model
     if _model is None:
-        _model = SentenceTransformer(_MODEL_NAME)
+        _model = SentenceTransformer(str(_MODEL_PATH))
     return _model
 
 
