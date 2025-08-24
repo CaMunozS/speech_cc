@@ -1,11 +1,8 @@
-# Pesos de modelos (HuggingFace / Transformers)
-model/*.bin filter=lfs diff=lfs merge=lfs -text
-model/*.pt filter=lfs diff=lfs merge=lfs -text
-model/*.ckpt filter=lfs diff=lfs merge=lfs -text
-model/*.onnx filter=lfs diff=lfs merge=lfs -text
-model/*.safetensors filter=lfs diff=lfs merge=lfs -text
+# TODO el contenido de la carpeta model va a Git LFS
+model/** filter=lfs diff=lfs merge=lfs -text
 
-# Archivos chicos quedan normales
+# PERO estos archivos se quedan en Git normal
 model/.gitkeep -filter -diff -merge
 model/*.json -filter -diff -merge
 model/*.txt -filter -diff -merge
+model/*.md -filter -diff -merge
